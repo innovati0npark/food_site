@@ -1,0 +1,45 @@
+<h1>홍콩 중화요리 집</h1>
+
+
+<!-- <form method="post">
+    {% csrf_token %}
+    <label for="description">소개: </label>
+    <textarea id="bio" name="bio" rows="4" cols="50" id="description" name="description"> </textarea>
+    <input type="submit"  value="제출">
+</form> -->
+
+# index.html
+<h1>Lion 중화요리에 오신것을 환영합니다!!</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    <div>
+        <label for="category">카테고리 선택:</label>
+        <select name="category">
+          <option value="면류">면류</option>
+          <option value="식사류">식사류</option>
+          <option value="요리류">요리류</option>
+        </select>
+    </div>
+    
+    <div>
+    <label for="name">음식이름:</label>
+    <input type="text" name="name">
+    </div>
+    <div>
+    <label for="price">가격:</label>
+    <input type="text" name="price">
+    </div>
+    <div>
+    <label for="description">소개:</label>
+    <textarea name="description" rows="4" cols="50"></textarea>
+    </div>
+    <br>
+
+    <div>
+        <label for="">사진을 올려주세요</label>
+        <input type="file" name="photo">
+    </div>
+    
+    <input type="submit" value="제출">
+    
+</form>
