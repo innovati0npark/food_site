@@ -22,7 +22,8 @@
     <img src="{{ object.image_url }}" alt="{{ object.name }}" class="product-image mb-3">
     <p>{{ object.description }}</p>
 
-    <form action="{% url 'food_delete' pk=object.id %}" method="post">
+
+    <form action="{% url 'chinese:food_delete' pk=object.id %}" method="post">
         {% csrf_token %}
         <button type="submit" class="btn btn-danger">삭제하기</button>
     </form>
